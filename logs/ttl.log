@@ -1,8 +1,0 @@
-{"level":"info","time":"2022-04-14 22:09:41.41410","msg":"Log initialization successful!"}
-{"level":"info","time":"2022-04-14 22:09:41.41410","msg":"fetch keys per time:2000"}
-{"level":"info","time":"2022-04-14 22:09:41.41410","msg":"===>total records:10"}
-{"level":"info","time":"2022-04-14 22:09:41.41410","msg":"===>all tasks completed, ","task begin time:":"2022-04-14 22:09:41.205026 +0800 CST m=+0.000947834","end time":"2022-04-14 22:09:41.2249 +0800 CST m=+0.020821542","cost":0.019873708}
-{"level":"info","time":"2022-04-14 22:09:50.41410","msg":"Log initialization successful!"}
-{"level":"info","time":"2022-04-14 22:09:50.41410","msg":"fetch keys per time:2000"}
-{"level":"info","time":"2022-04-14 22:09:50.41410","msg":"===>total records:10"}
-{"level":"info","time":"2022-04-14 22:09:50.41410","msg":"===>all tasks completed, ","task begin time:":"2022-04-14 22:09:50.223373 +0800 CST m=+0.000818709","end time":"2022-04-14 22:09:50.228201 +0800 CST m=+0.005647251","cost":0.004828542}

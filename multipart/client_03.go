@@ -77,12 +77,12 @@ func getMultiPart3(r *http.Request) {
 		fileName := p.FileName()
 		if formName != "" && fileName == "" {
 			formValue, _ := ioutil.ReadAll(p)
-			fmt.Printf("formName:%s,formValue:%s\n", formName, formValue)
+			fmt.Printf("formName:%s,formValue:%s", formName, formValue)
 		}
 
 		if fileName != "" {
 			fileData, _ := ioutil.ReadAll(p)
-			fmt.Printf("fileName:%s,fileData:%s\n", fileName, fileData)
+			fmt.Printf("fileName:%s,fileData:%s", fileName, fileData)
 		}
 		fmt.Println()
 	}
