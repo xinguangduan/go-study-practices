@@ -13,4 +13,8 @@ func main() {
 	s1 := string(b1)
 	fmt.Println(s1)
 
+	multiLine := `hello 你好
+					测试下多行文本的
+				`
+	fmt.Println(multiLine)
 }

@@ -12,7 +12,7 @@ func showNotebook(book NoteBook) {
 	if !ok {
 		fmt.Println(v)
 	} else {
-		fmt.Println(v)
+		fmt.Println(v + "not")
 	}
 }
 func main() {

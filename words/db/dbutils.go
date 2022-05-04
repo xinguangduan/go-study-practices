@@ -21,7 +21,7 @@ func StructQuerySingle(wordName string, freq int) *vo.EnglishWords {
 func StructQueryMultiple() []vo.EnglishWords {
 	// 通过切片存储
 	englishWords := make([]vo.EnglishWords, 0)
-	rows, _ := MySQLDB.Query("SELECT * FROM `english_words` limit ?", 100)
+	rows, _ := MySQLDB.Query("SELECT * FROM `english_words` ratelimit ?", 100)
 	// 遍历
 	var word vo.EnglishWords
 	for rows.Next() {

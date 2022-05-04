@@ -5,10 +5,12 @@
 
 package main
 
-import "fmt"
-import "time"
+import (
+	"fmt"
+	"runtime"
+	"time"
+)
 import "sync/atomic"
-import "runtime"
 
 func main() {
 
