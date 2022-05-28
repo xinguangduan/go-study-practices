@@ -22,5 +22,6 @@ func main() {
 	fmt.Println(*a)
 	fmt.Println(a.age, a.name, a.sex, a.memo)
 	fmt.Println((*a).age, (*a).name, (*a).sex, (*a).memo)
+	fmt.Println(stud.age, stud.name, stud.sex, stud.memo)
 
 }

@@ -20,8 +20,11 @@ func checkErr(err error, msg string) {
 }
 
 func main() {
+	date := time.Now().UTC().Format(time.RFC1123)
+	fmt.Printf(date)
 	HttpClientExample()
 	//RoundTripExample()
+
 }
 
 const url = "http://localhost:9030/_groupcache/"

@@ -21,7 +21,9 @@ func main() {
 	// 有出错，`dateOut` 将获取到日期信息的字节。
 	dateOut, err := dateCmd.Output()
 	if err != nil {
-		panic(err)
+		//panic(err)
+		fmt.Println(err)
+		return
 	}
 	fmt.Println("> date")
 	fmt.Println(string(dateOut))
@@ -54,7 +56,9 @@ func main() {
 	lsCmd := exec.Command("bash", "-c", "ls -a -l -h")
 	lsOut, err := lsCmd.Output()
 	if err != nil {
-		panic(err)
+		//panic(err)
+		fmt.Println(err)
+		return
 	}
 	fmt.Println("> ls -a -l -h")
 	fmt.Println(string(lsOut))

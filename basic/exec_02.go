@@ -6,7 +6,10 @@
 
 package main
 
-import "syscall"
+import (
+	"fmt"
+	"syscall"
+)
 import "os"
 import "os/exec"
 
@@ -17,7 +20,9 @@ func main() {
 	// `exec.LookPath` 来得到它（大概是 `/bin/ls`）。
 	binary, lookErr := exec.LookPath("ls")
 	if lookErr != nil {
-		panic(lookErr)
+		fmt.Println(lookErr)
+		return
+		//panic(lookErr)
 	}
 
 	// `Exec` 需要的参数是切片的形式的（不是放在一起的一个大字
@@ -34,6 +39,8 @@ func main() {
 	// 在错误，那么我们将会得到一个返回值。
 	execErr := syscall.Exec(binary, args, env)
 	if execErr != nil {
-		panic(execErr)
+		fmt.Println(lookErr)
+		return
+		//panic(execErr)
 	}
 }
