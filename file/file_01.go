@@ -19,7 +19,6 @@ func main() {
 	file, err := os.Open(exPath + "/" + "ref_01.go")
 	if err != nil {
 		fmt.Printf("%s", err)
-		panic("load file error")
 		return
 	}
 	defer file.Close()
