@@ -30,7 +30,7 @@ func addProject(u user, p project) {
 		//获取输入
 		name := <-p.name
 		//访问数据库，输出结果通道
-		p.result <- "add project :" + name
+		p.result <- "add project :" + name + " finished."
 		fmt.Println("异步任务做完 耗时 5秒")
 	}()
 

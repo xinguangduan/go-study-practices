@@ -3,12 +3,14 @@ package main
 import (
 	"encoding/json"
 	"flag"
-	"github.com/gorilla/websocket"
+	"fmt"
 	"log"
 	"net/url"
 	"os"
 	"strings"
 	"time"
+
+	"github.com/gorilla/websocket"
 )
 
 func init() {
@@ -16,7 +18,8 @@ func init() {
 	// 已 只写入文件|没有时创建|文件尾部追加 的形式打开这个文件
 	logFile, err := os.OpenFile(`./ws_touch.log`, os.O_WRONLY|os.O_CREATE|os.O_APPEND, 0666)
 	if err != nil {
-		panic(err)
+		log.Fatal(err)
+		return
 	}
 	// 设置存储位置
 	log.SetOutput(logFile)
@@ -169,7 +172,7 @@ func findAddressAndPath(str string) (string, string, string) {
 	strs := strings.Split(str, ":")
 
 	if len(strs) < 3 {
-		panic("incorrect remote address.")
+		fmt.Println("incorrect remote address.")
 		os.Exit(1)
 	}
 	protocol := strs[0]

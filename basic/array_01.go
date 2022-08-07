@@ -18,5 +18,6 @@ func main() {
 	y := make([]int, 30)
 	p(y)
 	p(xx)
+	p(xx)
 
 }

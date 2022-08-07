@@ -3,10 +3,11 @@ package main
 import (
 	"errors"
 	"fmt"
-	"github.com/gorilla/websocket"
 	"os"
 	"strings"
 	"sync"
+
+	"github.com/gorilla/websocket"
 )
 
 //封装websocket并发读写操作
@@ -106,7 +107,7 @@ func main() {
 	var str = "wss://localhost:8899/ws"
 	strs := strings.Split(str, ":")
 	if len(strs) < 3 {
-		panic("incorrect remote address.")
+		fmt.Println("incorrect remote address.")
 		os.Exit(1)
 	}
 	path := strs[2]

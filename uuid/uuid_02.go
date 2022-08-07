@@ -3,6 +3,7 @@ package main
 import (
 	"errors"
 	"fmt"
+	"log"
 	"runtime"
 	"sync"
 	"time"
@@ -92,7 +93,8 @@ func main() {
 	epoch := 1596850974657
 	s, err := NewSnowflake(datacenterId, workerId, epoch)
 	if err != nil {
-		panic(err)
+		log.Fatalln(err)
+		return
 	}
 	var wg sync.WaitGroup
 	for i := 0; i < 1000000; i++ {
